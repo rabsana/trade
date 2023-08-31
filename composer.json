@@ -1,0 +1,37 @@
+{
+    "name": "rabsana/trade",
+    "type": "library",
+    "description": "An elegant order matching system for laravel framework.",
+    "license": "MIT",
+    "authors": [{
+        "name": "Sajjad Sisakhti",
+        "email": "sajjad.30sakhti@gmail.com",
+        "homepage": "https://rabsana.ir"
+    }],
+    "require-dev": {
+        "orchestra/testbench": "^6.18"
+    },
+    "require": {
+        "rabsana/core": "^1.0",
+        "mavinoo/laravel-batch": "2.2.9",
+        "pusher/pusher-php-server": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rabsana\\Trade\\": "src/",
+            "Rabsana\\Trade\\Database\\": "database/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rabsana\\Trade\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rabsana\\Trade\\Providers\\TradeServiceProvider"
+            ]
+        }
+    }
+}
